@@ -1,4 +1,3 @@
-package com.student;
 import java.util.Scanner;
 public class Student {
     public static void main(String[] args){
@@ -36,5 +35,6 @@ public class Student {
         else{
             System.out.println("Grade is F and percent is "+percent);
         }
+        s.close();
     }
 }
