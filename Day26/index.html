@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1{
+            text-align: center;
+        }
+        .data{
+            width: 70%;
+            margin-left: 10%;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: aliceblue;
+        }
+        .table{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+        }
+        td,th{
+            text-align: center;
+            padding: 1em;
+        }
+        .display{
+            background-color: green;
+        }
+        .hide{
+            background-color: rgb(220, 20, 20);
+        }
+        button{
+            padding: 0.5em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        input{
+            padding: 0.5em;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            margin-left: 4%;
+            margin-right:0%;
+        }
+        .model{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            position :fixed;
+            display: none;
+        }
+        .model-child{
+            height:500px;
+            width: 70%;
+            background-color: white;
+            margin-left: 15%;
+            margin-top: 100px;
+        }
+        .update-button{
+            margin-left: 4%;
+        }
+
+        .first-input-update{
+            margin-top: 4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="model" onclick="hideBlock(event)">
+        <div class="model-child">
+            <form onsubmit="updateSuperhero()">
+                <input class="first-input-update" type="text" placeholder="Name" id="upname" required/><br><br>
+                <input type="text" placeholder="Age" id="upage" required/><br><br>
+                <input type="text" placeholder="Planet" id="upplanet" required/><br><br>
+                <input type="text" placeholder="Height" id="upheight" required/><br><br>
+                <button class="update-button" type="submit">Update SuperHero</button>
+            </form>
+        </div>
+    </div>
+    <div class="data">
+        <h1>Super Heros</h1>
+        <div class="form">
+            <form onsubmit="addSuperhero(event)">
+                <input type="text" placeholder="Name" id="name" required/>
+                <input type="text" placeholder="Age" id="age" required/>
+                <input type="text" placeholder="Planet" id="planet" required/>
+                <input type="text" placeholder="Height" id="height" required/>
+                <button type="submit">Add SuperHero</button>
+            </form>
+            <form>
+                <input type="text" class="search-text" onkeyup="searchByName()"/>
+            </form>
+        </div>
+        <table class="table" border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Planet</th>
+                    <th>Height</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tdata">
+            </tbody>
+        </table>
+        <button class="display" onclick="display()">Display</button>
+        <button class="hide" onclick="hide()">Hide</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="example.js"></script>
+</body>
+</html>
