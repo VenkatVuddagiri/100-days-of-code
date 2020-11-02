@@ -4,4 +4,4 @@ def multiplication_table(start, stop):
 			print(str(x*y), end=" ")
 		print()
 
-multiplication_table(1, 3)
+multiplication_table(1, 3)  
