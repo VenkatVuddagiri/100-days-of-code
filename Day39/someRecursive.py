@@ -14,3 +14,5 @@ def someRecursive(arr, cb):
     elif(len(arr)==1):
         return cb(arr[0])
     return someRecursive(arr[1:],cb)
+
+print(someRecursive([1,2,3,4],isOdd))
